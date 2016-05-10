@@ -148,7 +148,7 @@ function fx_base_plugin_activation_notice(){
 	$transient = get_transient( 'fx_base_activation_notice' );
 	if( $transient ){
 		?>
-		<div class="updated notice is-dismissible">
+		<div class="notice notice-info is-dismissible">
 			<p><?php _e( 'Thank you for using our plugin :)', 'fx-base' ); ?></p>
 		</div>
 		<?php
