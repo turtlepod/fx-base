@@ -17,6 +17,16 @@
 if ( ! defined( 'WPINC' ) ) { die; }
 
 
+/* Constants
+------------------------------------------ */
+
+define( 'FX_BASE_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+define( 'FX_BASE_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'FX_BASE_FILE', __FILE__;
+define( 'FX_BASE_PLUGIN', plugin_basename( __FILE__ );
+define( 'FX_BASE_VERSION', '1.0.0' );
+
+
 /* Init
 ------------------------------------------ */
 
@@ -30,11 +40,11 @@ add_action( 'plugins_loaded', 'fx_base_init' );
 function fx_base_init(){
 
 	/* Var */
-	$uri      = trailingslashit( plugin_dir_url( __FILE__ ) );
-	$path     = trailingslashit( plugin_dir_path( __FILE__ ) );
-	$file     = __FILE__;
-	$plugin   = plugin_basename( __FILE__ );
-	$version  = '1.0.0';
+	$uri      = FX_BASE_URI;
+	$path     = FX_BASE_PATH;
+	$file     = FX_BASE_FILE;
+	$plugin   = FX_BASE_PLUGIN;
+	$version  = FX_BASE_VERSION;
 
 	/* Prepare */
 	require_once( $path . 'includes/prepare.php' );
