@@ -13,7 +13,6 @@ class fx_Base_Settings{
 
 	/* Settings vars */
 	public $settings_slug = 'fx-base';
-	//public $settings_id = 'settings_page_fx-base'; /* $hook_suffix Under "Settings" */
 	public $settings_id = 'fx_base_page_fx-base'; /* $hook_suffix */
 	public $options_group = 'fx-base';
 	public $option_name = 'fx-base';
@@ -136,4 +135,3 @@ class fx_Base_Settings{
 	}
 
 }
-
