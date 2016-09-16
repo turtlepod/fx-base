@@ -2,6 +2,7 @@
 namespace fx_base;
 if ( ! defined( 'WPINC' ) ) { die; }
 Stuff::get_instance();
+
 /**
  * Stuff
  * @since 1.0.0

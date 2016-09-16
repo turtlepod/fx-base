@@ -1,20 +1,23 @@
 <?php
-/* Prepare Plugin
- * @since 1.0.0
------------------------------------------- */
 if ( ! defined( 'WPINC' ) ) { die; }
 
-/* Load Text Domain */
+
+/* Load Text Domain
+------------------------------------------ */
 load_plugin_textdomain( dirname( $plugin ), false, dirname( $plugin ) . '/languages/' );
 
-/* Load Updater */
+
+/* Load Updater
+------------------------------------------ */
 require_once( $path . 'library/updater.php' );
 $args = array(
 	'id' => $plugin,
 );
 new Fx_Base_Updater( $args );
 
-/* Add Support Link */
+
+/* Add Support Link
+------------------------------------------ */
 require_once( $path . 'library/plugin-action-links.php' );
 $args = array(
 	'plugin'    => $plugin,
@@ -24,7 +27,9 @@ $args = array(
 );
 new Fx_Base_Plugin_Action_Links( $args );
 
-/* Check PHP and WordPress Version */
+
+/* Check PHP and WordPress Version
+------------------------------------------ */
 require_once( $path . 'library/system-requirement.php' );
 $args = array(
 	'wp_requires'   => array(
@@ -37,11 +42,11 @@ $args = array(
 	),
 );
 $sys_req = new Fx_Base_System_Requirement( $args );
-if( ! $sys_req->check() ){
-	return;
-}
+if( ! $sys_req->check() ) return;
 
-/* Welcome Notice */
+
+/* Welcome Notice
+------------------------------------------ */
 require_once( $path . 'library/welcome-notice.php' );
 $args = array( 
 	'notice'  => wpautop( __( 'Thank you for using our plugin :)', 'fx-base' ) ),

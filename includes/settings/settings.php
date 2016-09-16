@@ -27,7 +27,7 @@ class Settings{
 		$this->uri  = trailingslashit( plugin_dir_url( __FILE__ ) );
 		$this->path = trailingslashit( plugin_dir_path( __FILE__ ) );
 		$this->settings_slug = 'fx-base';
-		$this->settings_id   = 'fx_base_page_fx-base'; /* $hook_suffix */
+		$this->hook_suffix   = 'fx_base_page_fx-base';
 		$this->options_group = 'fx-base';
 		$this->option_name   = 'fx-base';
 
@@ -120,7 +120,8 @@ class Settings{
 			<input type="text" name="fx-base" value="<?php echo sanitize_text_field( get_option( $this->option_name ) ); ?>">
 		</p>
 		<p class="description">
-			<?php _e( 'Hi there!', 'fx-base' ); ?></p>
+			<?php _e( 'Hi there!', 'fx-base' ); ?>
+		</p>
 		<?php
 	}
 
@@ -141,7 +142,7 @@ class Settings{
 	public function scripts( $hook_suffix ){
 
 		/* Only load in settings page. */
-		if ( $this->settings_id == $hook_suffix ){
+		if ( $this->hook_suffix == $hook_suffix ){
 
 			/* CSS */
 			wp_enqueue_style( "{$this->settings_slug}_settings", $this->uri . 'assets/settings.css', array(), VERSION );
