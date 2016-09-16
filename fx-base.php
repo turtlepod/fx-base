@@ -22,8 +22,8 @@ if ( ! defined( 'WPINC' ) ) { die; }
 
 define( 'FX_BASE_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'FX_BASE_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-define( 'FX_BASE_FILE', __FILE__;
-define( 'FX_BASE_PLUGIN', plugin_basename( __FILE__ );
+define( 'FX_BASE_FILE', __FILE__ );
+define( 'FX_BASE_PLUGIN', plugin_basename( __FILE__ ) );
 define( 'FX_BASE_VERSION', '1.0.0' );
 
 
