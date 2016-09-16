@@ -16,4 +16,15 @@ define( __NAMESPACE__ . '\PLUGIN', $plugin );
 define( __NAMESPACE__ . '\VERSION', $version );
 
 
+/* Load Files
+------------------------------------------ */
+
+/* Functions */
+require_once( PATH . 'includes/functions.php' );
+
+/* Post Type & Taxonomy */
+require_once( PATH . 'includes/custom-content/custom-content.php' );
+
+/* Settings */
+require_once( PATH . 'includes/settings/settings.php' );
 

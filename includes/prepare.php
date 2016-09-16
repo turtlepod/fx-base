@@ -5,7 +5,7 @@
 if ( ! defined( 'WPINC' ) ) { die; }
 
 /* Load Text Domain */
-load_plugin_textdomain( dirname( $plugin ), false, dirname( $plugin ) . '/assets/languages/' );
+load_plugin_textdomain( dirname( $plugin ), false, dirname( $plugin ) . '/languages/' );
 
 /* Load Updater */
 require_once( $path . 'library/updater.php' );

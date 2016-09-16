@@ -4,12 +4,9 @@ namespace fx_base;
 /**
  * Class Wrapper for plugin functions.
  * All functions are "public" and "static"
- * The idea is to enable "use" in "child" namespace.
  * Usage:
- *
- * use fx_base\Functions;
- * Functions::get_option( $args ); 
- *
+ * `use fx_base\Functions;`
+ * `Functions::get_option( $args );`
  * @since 1.0.0
  */
 class Functions{
@@ -19,7 +16,7 @@ class Functions{
 	 * To get option easier when merging multiple option in single option name.
 	 * @since 1.0.0
 	 */
-	public static function fx_base_get_option( $option, $default = '', $option_name = 'fx-base' ) {
+	public static function get_option( $option, $default = '', $option_name = 'fx-base' ) {
 
 		/* Bail early if no option defined */
 		if ( !$option ){
