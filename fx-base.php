@@ -119,18 +119,6 @@ function fx_base_plugin_activation() {
 	/* Temporary Data (5sec) to Add Activation Notice */
 	set_transient( 'fx_base_activation_notice', '1', 5 );
 
-	/* Uninstall hook */
-	register_uninstall_hook( __FILE__, 'fx_base_plugin_uninstall' );
-}
-
-
-/**
- * Runs only when the plugin is uninstalled (deleted via wp-admin).
- * @since 1.0.0
- */
-function fx_base_plugin_uninstall(){
-	/* Delete option */
-	delete_option( 'fx-base' );
 }
 
 
