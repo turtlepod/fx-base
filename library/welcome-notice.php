@@ -57,7 +57,9 @@ class Fx_Base_Welcome_Notice{
 		if ( current_user_can( $this->args['capability'] ) && check_admin_referer( "{$this->args['option']}_nonce" ) ) {
 			update_option( $this->args['option'], 1 );
 		}
-		wp_safe_redirect( wp_get_referer() ? wp_get_referer() : admin_url( 'index.php' ) );
+		/* Redirect them back to the page where they click dismiss icon */
+		$redirect_url = wp_get_referer() ? wp_get_referer() : admin_url( 'index.php' );
+		wp_safe_redirect( esc_url_raw( $redirect_url ) );
 		die();
 	}
 
