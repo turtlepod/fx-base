@@ -1,8 +1,24 @@
 <?php
 /**
  * Dismissable Admin Notice
- * @version 1.0.0
- */
+ *
+ * @version 1.1.0
+ * @author David Chandra Purnama <david@genbumedia.com>
+ * @copyright Copyright (c) 2016, Genbu Media
+ * @license GPLv2 or later
+ *
+ *-----------------------------
+ * CHANGELOG:
+ *-----------------------------
+ *
+ * 1.1.0 - 27.NOV.2016
+ * - Add Hook Suffix Args.
+ * 
+ * 1.0.0 - 18.SEP.2016
+ * - Initial Release.
+ *
+ *-----------------------------
+**/
 class Fx_Base_Welcome_Notice{
 
 	/* Args */
@@ -17,10 +33,11 @@ class Fx_Base_Welcome_Notice{
 		}
 
 		$defaults = array(
-			'notice'     => '',
-			'option'     => 'fx-base_welcome',
-			'dismiss'    => 'Dismiss this notice.',
-			'capability' => 'manage_options',
+			'notice'      => '',
+			'option'      => 'fx-base_welcome',
+			'dismiss'     => 'Dismiss this notice.',
+			'capability'  => 'manage_options',
+			'hook_suffix' => '', // target admin page/settings.
 		);
 		$this->args = wp_parse_args( $args, $defaults );
 
@@ -39,6 +56,14 @@ class Fx_Base_Welcome_Notice{
 	 * Admin Notice
 	 */
 	public function admin_notices(){
+
+		/* Kill and bail if visiting the target admin page. */
+		global $hook_suffix;
+		if( $this->args['hook_suffix'] && $this->args['hook_suffix'] === $hook_suffix ){
+			delete_option( $this->args['option'] );
+			return;
+		}
+
 		$url = add_query_arg( 'action', "{$this->args['option']}_dismiss", admin_url( 'admin-ajax.php' )
 		);
 		$url = wp_nonce_url( $url, "{$this->args['option']}_nonce" );

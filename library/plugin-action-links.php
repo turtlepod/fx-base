@@ -1,9 +1,22 @@
 <?php
 /**
  * Plugin Action Links Helper Class
- * Simply add support link to Genbu Media Contact Form.
- * @version 1.0.0
- */
+ * Class to simply add support link to Genbu Media Contact Form.
+ *
+ * @version 1.1.0
+ * @author David Chandra Purnama <david@genbumedia.com>
+ * @copyright Copyright (c) 2016, Genbu Media
+ * @license GPLv2 or later
+ *
+ *-----------------------------
+ * CHANGELOG:
+ *-----------------------------
+ *
+ * 1.0.0 - 18.SEP.2016
+ * - Initial Release.
+ *
+ *-----------------------------
+**/
 class Fx_Base_Plugin_Action_Links{
 
 	/* System Requirement */

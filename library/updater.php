@@ -1,7 +1,21 @@
 <?php
 /**
- * f(x) Updater Plugin Class
+ * f(x) Updater Helper Class
+ *
+ * @version 1.0.0
  * @link https://genbumedia.com/plugins/fx-updater/
+ * @author David Chandra Purnama <david@genbumedia.com>
+ * @copyright Copyright (c) 2016, Genbu Media
+ * @license GPLv2 or later
+ *
+ *-----------------------------
+ * CHANGELOG:
+ *-----------------------------
+ *
+ * 1.0.0 - 03.JUL.2016
+ * - Initial Release.
+ *
+ *-----------------------------
 **/
 class Fx_Base_Updater{
 

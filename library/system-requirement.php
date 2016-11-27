@@ -1,10 +1,24 @@
 <?php
 /**
- * System Requirement Check
- * Prefix this class with plugin prefix.
+ * Plugin System Requirement Check
+ *
+ * Important: Prefix this class with plugin prefix.
  * Do not add namespace to this file. This file need to be PHP 5.2.4 compatible.
+ *
  * @version 1.0.0
- */
+ * @author David Chandra Purnama <david@genbumedia.com>
+ * @copyright Copyright (c) 2016, Genbu Media
+ * @license GPLv2 or later
+ *
+ *-----------------------------
+ * CHANGELOG:
+ *-----------------------------
+ *
+ * 1.0.0 - 18.SEP.2016
+ * - Initial Release.
+ *
+ *-----------------------------
+**/
 class Fx_Base_System_Requirement{
 
 	/* System Requirement */
