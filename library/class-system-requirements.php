@@ -9,17 +9,8 @@
  * @author David Chandra Purnama <david@genbumedia.com>
  * @copyright Copyright (c) 2016, Genbu Media
  * @license GPLv2 or later
- *
- *-----------------------------
- * CHANGELOG:
- *-----------------------------
- *
- * 1.0.0 - 18.SEP.2016
- * - Initial Release.
- *
- *-----------------------------
 **/
-class Fx_Base_System_Requirement{
+class fx_Base_System_Requirements{
 
 	/* System Requirement */
 	var $args;

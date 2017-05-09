@@ -19,7 +19,7 @@
  *
  *-----------------------------
 **/
-class Fx_Base_Welcome_Notice{
+class fx_Base_Welcome_Notice{
 
 	/* Args */
 	var $args;

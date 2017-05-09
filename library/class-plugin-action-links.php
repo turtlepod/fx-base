@@ -17,7 +17,7 @@
  *
  *-----------------------------
 **/
-class Fx_Base_Plugin_Action_Links{
+class fx_Base_Plugin_Action_Links{
 
 	/* System Requirement */
 	var $args;
